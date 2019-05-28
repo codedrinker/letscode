@@ -5,7 +5,7 @@
 
 # 刷题步骤
 1. 修改自己的刷题群备注为自己的 Github 账号名称，例如 codedrinker
-2. Fork letscode 到自己的仓库  
+2. 点击 Star，Fork `letscode` 到自己的仓库  
 3. 按照序号刷题，在以 LeetCode 题目名称的文件夹下面创建自己 Github 账号同名的文件名，例如
 ```
   1.MoveZeroes
