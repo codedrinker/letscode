@@ -15,7 +15,3 @@ class Solution(object):
             nums[i] = 0
         return nums
 
-nums = input("输入数字：")
-nums = [int(n) for n in nums.split()]
-a = Solution()
-print(a.moveZeroes(nums))
