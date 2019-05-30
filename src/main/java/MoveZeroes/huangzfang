@@ -1,26 +1,35 @@
 public class MoveZeroes {
     public void moveZeroes(int[] nums) {
-        if(nums.length==0){
-            return;
-        }
-        int doValue=0;
-        int length=nums.length;
-        for(int i=0;i<length;i++){
-            if(nums[i]!=0){
-                continue;
-            }
-            int index=i;//作为交换时候的当前位置指针
-            for(int j=i+1;j<length-doValue;j++){
-                int middel=nums[j];
-                //如果在交换中发现仍然有0的存在的话，则从头再遍历
-                if(middel==0){
-                    i=-1;
-                }
-                nums[j]=nums[index];
-                nums[index]=middel;
-                index=j;
-            }
-            doValue++;
+        //First
+        //if(nums.length==0){
+        //    return;
+        //}
+        //int doValue=0;
+        //int length=nums.length;
+        //for(int i=0;i<length;i++){
+        //    if(nums[i]!=0){
+        //        continue;
+        //    }
+        //    int index=i;//作为交换时候的当前位置指针
+        //    for(int j=i+1;j<length-doValue;j++){
+        //        int middel=nums[j];
+        //        //如果在交换中发现仍然有0的存在的话，则从头再遍历
+        //        if(middel==0){
+        //            i=-1;
+        //        }
+        //        nums[j]=nums[index];
+        //        nums[index]=middel;
+        //        index=j;
+        //    }
+        //    doValue++;
+        //}
+        //Last
+        for(int i=0,cur=0; i<nums.length; i++){
+           if(nums[i]!=0){
+              int swap=nums[i];
+              nums[i]=nums[cur];
+              nums[cur++]=swap;
+           }
         }
     }
 }
