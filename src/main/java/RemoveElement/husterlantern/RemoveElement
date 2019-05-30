@@ -1,5 +1,5 @@
     /*
-    解题思路：和MoveZerees思路一样，不能创建新的数组，只能在原油数组上操作，
+    解题思路：和MoveZerees思路一样，不能创建新的数组，只能在原数组上操作，
     在找到和指定数字不相等的元素时，把元素移到前面去，索引往后移、进行循环，返回不相等的元素等于数组的长度减去
      */
     public  static int removeElement(int[] nums, int val) {
