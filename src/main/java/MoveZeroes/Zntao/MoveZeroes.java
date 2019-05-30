@@ -2,34 +2,21 @@ package MoveZeroes.Zntao;
 
 /**
  * Created by Zntao
- * 解题思路
  */
 public class MoveZeroes {
+    // 通过一个变量维护前面非0的数组下标，新遍历到非零数据时与最前一个0兑换。（类似插入排序的思路）
     public static void moveZeroes(int[] nums) {
 
-        // 第一种：复制一份出来
         int length = nums.length;
-        if(length <= 1){
-            return;
-        }
-        int[] copyNums = new int[length];
-        int j = 0;//从前开始遍历
-        int k = length-1; //从后开始遍历
-
+        int seq = 0;
         for(int i = 0; i< length; i++){
-            if(nums[i] == 0){
-                copyNums[k] = 0;
-                k--;
-            }
-            else {
-                copyNums[j] = nums[i];
-                j++;
+            if(nums[i] != 0){
+                int temp = nums[i];
+                nums[i] = 0;
+                nums[seq] = temp;
+                seq++;
             }
 
-        }
-
-        for(int i = 0; i< length; i++){
-            nums[i] = copyNums[i];
         }
 
     }
