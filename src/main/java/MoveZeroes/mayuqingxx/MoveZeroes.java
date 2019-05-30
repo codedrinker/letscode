@@ -1,5 +1,6 @@
+package MoveZeroes.mayuqingxx;
 
-class Solution {
+public class MoveZeroes {
     public void moveZeroes(int[] nums) {
          for (int i = 0, a = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
@@ -8,6 +9,5 @@ class Solution {
                 nums[a++] = temp;
             }
         }
-    
     }
 }
