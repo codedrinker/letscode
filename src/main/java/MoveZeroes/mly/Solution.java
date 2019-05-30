@@ -1,7 +1,9 @@
+package MoveZeroes.mly;
+
 /**
  * Created by maliyuan on 2019/5/29.
  */
-public class MoveZeroes {
+public class Solution {
     public void MoveZeroes(int[] nums ){
         if (nums == null || nums.length == 0 ) {
             return;
