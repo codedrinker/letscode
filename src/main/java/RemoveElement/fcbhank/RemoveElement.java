@@ -5,7 +5,7 @@ package RemoveElement.fcbhank;
  * 27. Remove Element
  * 解题思路：
  * 遍历数组，记录元素为val的个数为count。
- * 当前元素不为val时，其下标减去count即为数组去掉位于该元素前所有0后应处的位置，最后在末尾按count补全val。
+ * 当前元素不为val时，其下标减去count即为数组去掉位于该元素前所有val后应处的位置，最后在末尾按count补全val。
  */
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
