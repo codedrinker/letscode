@@ -7,6 +7,7 @@ package RemoveElement.beau0303;
  * e-mail:codemeifan@gmail.com.
  */
 public class RemoveElement {
+    /*双指针，i从头开始定位，j去寻找非val的元素，然后把它赋值给i，这样遍历完，前i个元素都是非val的，return i*/
     public int removeElement(int[] a, int val) {
         int i, j;
         for (i = 0, j = 0; j < a.length; j++) {
