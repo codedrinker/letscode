@@ -1,28 +1,38 @@
 package ValidParentheses.AzusaMutan.graceBaoXP;
 
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.Stack;
 
 public class ValidParentheses {
 
     public boolean checkValidString(String s) {
-        Map<Character,Character> map=new HashMap<>();
-        map.put('}','{');
-        map.put(']','[');
-        map.put(')','(');
-        char[] chars=new char[s.length()];
-        int p=-1;
-        for(int i=0;i<s.length();i++){
-            if (map.containsValue(s.charAt(i))){
-                p++;
-                chars[p]=s.charAt(i);
-            }
-            if (map.containsKey(s.charAt(i))){
-                if (p==-1||chars[p--]!=map.get(s.charAt(i))){
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                stack.push('(');
+            } else if (s.charAt(i) == '[') {
+                stack.push('[');
+            } else if (s.charAt(i) == '{') {
+                stack.push('{');
+            } else if (s.charAt(i) == ')') {
+                if (stack.isEmpty() || stack.pop() != '(') {
+                    return false;
+                }
+            } else if (s.charAt(i) == ']') {
+                if (stack.isEmpty() || stack.pop() != '[') {
+                    return false;
+                }
+            } else if (s.charAt(i) == '}') {
+                if (stack.isEmpty() || stack.pop() != '{') {
                     return false;
                 }
             }
         }
-        return p==-1;
+        if (stack.isEmpty()) {
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }
