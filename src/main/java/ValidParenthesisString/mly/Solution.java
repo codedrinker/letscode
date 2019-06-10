@@ -1,4 +1,4 @@
-package GenerateParentheses.mly.ValidParenthesisString;
+package ValidParenthesisString.mly;
 
 public class Solution {
     public boolean checkValidString(String s) {

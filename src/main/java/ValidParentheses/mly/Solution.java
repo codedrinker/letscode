@@ -1,4 +1,4 @@
-package GenerateParentheses.mly.ValidParentheses;
+package ValidParentheses.mly;
 
 
 import java.util.HashMap;
