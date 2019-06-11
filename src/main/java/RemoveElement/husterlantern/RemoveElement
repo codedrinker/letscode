@@ -1,0 +1,19 @@
+    /*
+    解题思路：和MoveZerees思路一样，不能创建新的数组，只能在原数组上操作，
+    在找到和指定数字不相等的元素时，把元素移到前面去，索引往后移、进行循环，返回不相等的元素等于数组的长度减去
+     */
+    public  static int removeElement(int[] nums, int val) {
+        int i=0,j=0;
+        while(i<nums.length){
+            if(nums[i]!=val){
+                nums[j++]=nums[i++];
+            }else{
+                i++;
+            }
+        }
+        for(int k=0;k<j;k++){
+           System.out.print(nums[k]+" ");
+        }
+        System.out.println();
+        return j;
+    }
