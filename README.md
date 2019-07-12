@@ -16,6 +16,3 @@
 4. 访问 https://leetcode.com/ 官网，注册账号
 5. 访问每个题目下面的 Readme.md 里面是链接地址和题目
 6. 完成编码以后，到 LeetCode 官网提交结果，Accepted 以后再提交 Pull Request 合并到 master
-
-# 加群
-添加群主微信[small_artisan]，回复「LeetCode」。
